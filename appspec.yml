@@ -19,7 +19,7 @@ hooks:
             timeout: 300
             runas: root
             
-         = location: /etc/systemd/system/gunicorn.socket
+         - location: /etc/systemd/system/gunicorn.socket
             timeout: 300
             runas: root
             
