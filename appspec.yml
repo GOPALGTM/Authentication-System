@@ -8,31 +8,36 @@ hooks:
     BeforeInstall:
         - location: beforeinstall.sh
             timeout: 300
-            runas: ubuntu
+            runas: root
 
     AfterInstall:
          - location: afterinstall.sh
             timeout: 300
-            runas: ubuntu
+            runas: root
          
          - location:  /etc/systemd/system/gunicorn.socket
             timeout: 300
-            runas: ubuntu
+            runas: root
             
          = location: /etc/systemd/system/gunicorn.socket
             timeout: 300
-            runas: ubuntu
+            runas: root
             
          - location: /scripts/command
             timeout: 300
-            runas: ubuntu
+            runas: root
             
          - location: /etc/nginx/sites-available/myproject
             timeout: 300
-            runas: ubuntu
+            runas: root
             
     ApplicationStart:
          - location: scripts/start_server
+            timeout: 300
+            runas: root
+            
+    ApplicationStop:
+         - location: scripts/stop_application.sh
             timeout: 300
             runas: root
             
