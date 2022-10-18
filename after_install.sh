@@ -7,4 +7,4 @@ source env/bin/activate
 cd Authentication-System
 pip install django gunicorn
 sudo ufw allow 8000
-python manage.py runserver
+python3 manage.py runserver
