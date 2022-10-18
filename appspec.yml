@@ -8,9 +8,11 @@ hooks:
     BeforeInstall:
         - location: beforeinstall.sh
             timeout: 100
+            runas: ubuntu
 
     AfterInstall:
          - location: afterinstall.sh
             timeout: 100
+            runas: ubuntu
 
     
