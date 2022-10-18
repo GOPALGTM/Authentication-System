@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-    - source: /
+    - source: /Authentication-System
       destination: /home/ubuntu/project
 
 hooks:
