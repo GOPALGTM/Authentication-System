@@ -1,5 +1,5 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
     - source: /
       destination: /home/ubuntu/project
@@ -7,12 +7,12 @@ files:
 hooks:
     BeforeInstall:
         - location: beforeinstall.sh
-            timeout: 100
+            timeout: 300
             runas: ubuntu
 
     AfterInstall:
          - location: afterinstall.sh
-            timeout: 100
+            timeout: 300
             runas: ubuntu
 
     
