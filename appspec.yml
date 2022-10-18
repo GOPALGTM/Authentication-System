@@ -14,5 +14,21 @@ hooks:
          - location: afterinstall.sh
             timeout: 300
             runas: ubuntu
-
-    
+         
+         - location:  /etc/systemd/system/gunicorn.socket
+            timeout: 300
+            runas: ubuntu
+            
+         = location: /etc/systemd/system/gunicorn.socket
+            timeout: 300
+            runas: ubuntu
+            
+         - location: /scripts/command
+            timeout: 300
+            runas: ubuntu
+            
+         - location: /etc/nginx/sites-available/myproject
+            timeout: 300
+            runas: ubuntu
+            
+   
