@@ -1,4 +1,5 @@
 #!bin/bash
+cd home/ubuntu/project
 
 [Unit]
 Description=gunicorn socket
