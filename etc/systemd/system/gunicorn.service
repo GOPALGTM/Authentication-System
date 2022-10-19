@@ -1,5 +1,5 @@
 #!bin/bash
-cd home/ubuntu/project/env
+cd /home/ubuntu/project/env
 
 [Unit]
 Description=gunicorn daemon
