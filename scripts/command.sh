@@ -1,4 +1,6 @@
 #!bin/bash
+
+cd home/ubuntu/project
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
 file /run/gunicorn.sock
