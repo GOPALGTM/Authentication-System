@@ -5,11 +5,7 @@ files:
       destination: /home/ubuntu/project
 
 hooks:
-    ApplicationStop:
-         - location: scripts/stop_application.sh
-            timeout: 300
-            runas: ubuntu
-            
+   
     BeforeInstall:
         - location: beforeinstall.sh
             timeout: 300
