@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu
+    destination: /home/ubuntu/project
 #   - source: server_configs/nginx/backend.conf
 #     destination: /etc/nginx/sites-enabled/
 #     runas: ubuntu
