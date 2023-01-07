@@ -1,42 +1,19 @@
 version: 0.0
 os: linux
 files:
-    - source: /
-      destination: /home/ubuntu/project
-
+  - source: /
+    destination: /home/ubuntu
+#   - source: server_configs/nginx/backend.conf
+#     destination: /etc/nginx/sites-enabled/
+#     runas: ubuntu
+#   - source: server_configs/nginx/backend.conf
+#     destination: /etc/nginx/sites-available/
+#     runas: ubuntu
+#   - source: server_configs/supervisor/backend_supervisor.conf
+#     destination: /etc/supervisor/conf.d
+#     runas: ubuntu
 hooks:
-   
-    BeforeInstall:
-        - location: beforeinstall.sh
-            timeout: 300
-            runas: ubuntu
-
-    AfterInstall:
-         - location: afterinstall.sh
-            timeout: 300
-            runas: ubuntu
-         
-         - location:  /etc/systemd/system/gunicorn.socket
-            timeout: 300
-            runas: ubuntu
-            
-         - location: /etc/systemd/system/gunicorn.socket
-            timeout: 300
-            runas: ubuntu
-            
-         - location: /scripts/command.sh
-            timeout: 300
-            runas: ubuntu
-            
-         - location: /etc/nginx/sites-available/myproject
-            timeout: 300
-            runas: ubuntu
-            
-    ApplicationStart:
-         - location: scripts/start_server.sh
-            timeout: 300
-            runas: ubuntu
-            
-    
-            
-   
+  BeforeInstall:
+      - location: scripts/before_install.sh
+  AfterInstall:
+      - location: scripts/after_install.sh
