@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/project
+    destination: /opt/codedeploy-agent/deployment-root/7a99d5e3-5b94-4a82-81dc-95e570fb937d/d-709YAG9M8/deployment-archive
 #   - source: server_configs/nginx/backend.conf
 #     destination: /etc/nginx/sites-enabled/
 #     runas: ubuntu
@@ -14,6 +14,6 @@ files:
 #     runas: ubuntu
 hooks:
   BeforeInstall:
-      - location: before_install.sh
+      - location: /opt/codedeploy-agent/deployment-root/7a99d5e3-5b94-4a82-81dc-95e570fb937d/d-709YAG9M8/deployment-archive/before_install.sh
   AfterInstall:
-      - location: after_install.sh
+      - location: /opt/codedeploy-agent/deployment-root/7a99d5e3-5b94-4a82-81dc-95e570fb937d/d-709YAG9M8/deployment-archive/after_install.sh
