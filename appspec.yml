@@ -14,6 +14,6 @@ files:
 #     runas: ubuntu
 hooks:
   BeforeInstall:
-      - location: scripts/before_install.sh
+      - location: before_install.sh
   AfterInstall:
-      - location: scripts/after_install.sh
+      - location: after_install.sh
