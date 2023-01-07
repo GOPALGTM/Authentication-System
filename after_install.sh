@@ -1,5 +1,5 @@
 #1bin/bash
-cd /home/ubuntu/project
+cd /opt/codedeploy-agent/deployment-root/7a99d5e3-5b94-4a82-81dc-95e570fb937d/d-709YAG9M8/deployment-archive
 virtualenv -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
