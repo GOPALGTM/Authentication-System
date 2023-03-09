@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "install nginx"
+      - sudo apt-get install nginx -y
+  build:
+    commands:
+      - echo "Running all unit tests"
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      
+artifacts:
+  files:
+    - '**/*'
