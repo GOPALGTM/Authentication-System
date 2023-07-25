@@ -161,13 +161,15 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_rename_app",
+    "user",
+    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -256,3 +258,17 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+APPEND_SLASH=False
+
+
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": "<provide-api-key>",
+}
+EMAIL_BACKEND = 'anymail.backends.sendinblue.EmailBackend'
+
+SERVER_EMAIL = 'gopalgautam279@gmail.com'
+DEFAULT_FROM_EMAIL = 'gopalgautam279@gmail.com'
+ADMINS = [('Your Name', 'gopalgautam279@gmail.com'),]
+
